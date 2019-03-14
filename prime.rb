@@ -3,7 +3,6 @@ require 'pry'
 
  def prime?(integer)
    array = (3..integer - 1).to_a
-   prime_array = []
 
    if integer <= 1
      false
@@ -12,11 +11,7 @@ require 'pry'
    elsif integer % 2 == 0
      false
    else
-     array.each {|element| prime_array << integer % element}
-     if prime_array.include?(0)
-       false
-     else
-       true
-     end
+     array.each {|element| if integer % element == 0; return false end}
+     true
    end
  end
