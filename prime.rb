@@ -7,7 +7,7 @@ require 'pry'
 
    if integer <= 1
      false
-   elsif integer == 2 || integer == 3
+   elsif integer <= 3
      true
    elsif integer % 2 == 0
      false
